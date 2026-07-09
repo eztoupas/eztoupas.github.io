@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ευάγγελος Ζτούπας</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --black:   #111111;
+      --dark:    #222222;
+      --mid:     #555555;
+      --light:   #999999;
+      --border:  #E5E5E5;
+      --bg:      #FAFAFA;
+      --white:   #FFFFFF;
+      --accent:  #111111;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: var(--white);
+      color: var(--dark);
+      line-height: 1.7;
+    }
+
+    /* ── FIXED LEFT NAV ── */
+    .sidenav {
+      position: fixed;
+      top: 0; left: 0;
+      width: 220px;
+      height: 100vh;
+      padding: 52px 36px;
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--border);
+      background: var(--white);
+      z-index: 50;
+    }
+
+    .sidenav-name {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+    .sidenav-role {
+      font-size: 0.72rem;
+      color: var(--light);
+      font-weight: 300;
+      margin-bottom: 48px;
+    }
+
+    .sidenav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .sidenav-links a {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--light);
+      text-decoration: none;
+      padding: 6px 0;
+      border-left: 2px solid transparent;
+      padding-left: 12px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .sidenav-links a:hover,
+    .sidenav-links a.active {
+      color: var(--black);
+      border-left-color: var(--black);
+    }
+
+    .sidenav-bottom {
+      margin-top: auto;
+      font-size: 0.68rem;
+      color: var(--border);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── MAIN CONTENT ── */
+    main {
+      margin-left: 220px;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      min-height: 100vh;
+      padding: 100px 80px 100px 80px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    section:last-of-type { border-bottom: none; }
+
+    /* ── HERO ── */
+    #hero {
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
+
+    .hero-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 28px;
+    }
+
+    .hero-name {
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      font-weight: 300;
+      letter-spacing: -0.02em;
+      color: var(--black);
+      line-height: 1.05;
+      margin-bottom: 8px;
+    }
+    .hero-name strong {
+      font-weight: 700;
+    }
+
+    .hero-divider {
+      width: 32px;
+      height: 1px;
+      background: var(--black);
+      margin: 32px 0;
+    }
+
+    .hero-desc {
+      max-width: 520px;
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.8;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      margin-top: 48px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 12px 24px;
+      border: 1px solid var(--black);
+      color: var(--black);
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+    .btn.fill {
+      background: var(--black);
+      color: var(--white);
+    }
+    .btn.fill:hover {
+      background: var(--dark);
+    }
+
+    /* ── SECTION HEADER ── */
+    .sec-label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 16px;
+    }
+    .sec-title {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 300;
+      color: var(--black);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+      margin-bottom: 48px;
+    }
+    .sec-title b { font-weight: 700; }
+
+    /* ── ABOUT ── */
+    #about { background: var(--bg); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+
+    .about-text p {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.85;
+      margin-bottom: 20px;
+    }
+
+    .degrees {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .degree-item {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .degree-item:first-child { border-top: 1px solid var(--border); }
+    .degree-item .di-label {
+      font-size: 0.67rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 4px;
+    }
+    .degree-item .di-title {
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--black);
+      line-height: 1.4;
+    }
+    .degree-item .di-sub {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--light);
+      margin-top: 2px;
+    }
+
+    /* ── RESEARCH ── */
+    #research { background: var(--white); }
+
+    .research-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .research-item {
+      background: var(--white);
+      padding: 36px 40px;
+      transition: background 0.2s;
+    }
+    .research-item:hover { background: var(--bg); }
+
+    .ri-num {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: var(--light);
+      margin-bottom: 16px;
+    }
+    .ri-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--black);
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+    .ri-body {
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.7;
+    }
+
+    /* ── TEACHING ── */
+    #teaching { background: var(--bg); }
+
+    .teaching-list {
+      list-style: none;
+    }
+    .teaching-item {
+      display: grid;
+      grid-template-columns: 40px 1fr;
+      gap: 24px;
+      align-items: start;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .teaching-item:first-child { border-top: 1px solid var(--border); }
+    .ti-num {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--light);
+      letter-spacing: 0.08em;
+      padding-top: 3px;
+    }
+    .ti-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+    .ti-body {
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: var(--mid);
+      line-height: 1.7;
+    }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--black); }
+    #contact .sec-label { color: #555; }
+    #contact .sec-title { color: var(--white); }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      padding: 28px 0;
+      border-bottom: 1px solid #222;
+      text-decoration: none;
+      transition: padding-left 0.2s;
+    }
+    .contact-row:first-of-type { border-top: 1px solid #222; }
+    .contact-row:hover { padding-left: 8px; }
+
+    .cr-label {
+      font-size: 0.67rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #555;
+      width: 100px;
+      flex-shrink: 0;
+    }
+    .cr-value {
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--white);
+    }
+    .cr-arrow {
+      margin-left: auto;
+      color: #444;
+      font-size: 1rem;
+      transition: color 0.2s;
+    }
+    .contact-row:hover .cr-arrow { color: var(--white); }
+
+    /* ── MOBILE ── */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      height: 56px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .mobile-nav-name {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--black);
+    }
+    .mobile-menu-btn {
+      background: none; border: none; cursor: pointer;
+      display: flex; flex-direction: column; gap: 5px;
+    }
+    .mobile-menu-btn span {
+      display: block; width: 22px; height: 1px; background: var(--black);
+    }
+    .mobile-drawer {
+      display: none;
+      position: fixed;
+      top: 56px; left: 0; right: 0;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      z-index: 99;
+      padding: 16px 24px 24px;
+      flex-direction: column;
+      gap: 0;
+    }
+    .mobile-drawer.open { display: flex; }
+    .mobile-drawer a {
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-drawer a:last-child { border-bottom: none; }
+
+    @media (max-width: 900px) {
+      .sidenav { display: none; }
+      main { margin-left: 0; }
+      .mobile-nav { display: flex; }
+      section { padding: 80px 28px; padding-top: 100px; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .research-list { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 72px 20px 64px; }
+      .hero-name { font-size: 2.4rem; }
+    }
+
+    /* PHOTO */
+    .profile-photo-wrap {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid #1A3A6B;
+      flex-shrink: 0;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 0 6px rgba(26,58,107,0.08);
+    }
+    .profile-photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    /* NAVY ACCENT */
+    :root {
+      --navy-accent: #1A3A6B;
+    }
+    .sidenav-links a:hover,
+    .sidenav-links a.active {
+      color: var(--navy-accent) !important;
+      border-left-color: var(--navy-accent) !important;
+    }
+    .btn.fill {
+      background: var(--navy-accent) !important;
+      border-color: var(--navy-accent) !important;
+    }
+    .btn.fill:hover { background: #112d57 !important; }
+    .btn:hover { border-color: var(--navy-accent) !important; color: var(--navy-accent) !important; }
+    .btn.fill:hover { color: var(--white) !important; }
+    .sec-label { color: var(--navy-accent) !important; }
+    .ri-num { color: #1A3A6B !important; font-weight: 700; }
+    .ti-num { color: #1A3A6B !important; }
+    .degree-item .di-label { color: var(--navy-accent) !important; }
+    .contact-row:hover .cr-label { color: #aaa !important; }
+  </style>
+</head>
+<body>
+
+  <!-- SIDE NAV (desktop) -->
+  <nav class="sidenav">
+    <div class="sidenav-name">Ε. Ζτούπας</div>
+    <div class="sidenav-role">Φυσικός</div>
+    <ul class="sidenav-links">
+      <li><a href="#hero">Αρχική</a></li>
+      <li><a href="#about">Βιογραφικό</a></li>
+      <li><a href="#research">Έρευνα</a></li>
+      <li><a href="#teaching">Διδασκαλία</a></li>
+      <li><a href="#contact">Επικοινωνία</a></li>
+    </ul>
+    <div class="sidenav-bottom">© 2026</div>
+  </nav>
+
+  <!-- MOBILE NAV -->
+  <div class="mobile-nav">
+    <span class="mobile-nav-name">Ε. Ζτούπας</span>
+    <button class="mobile-menu-btn" id="mobileBtn" aria-label="Μενού">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="#hero" onclick="closeDrawer()">Αρχική</a>
+    <a href="#about" onclick="closeDrawer()">Βιογραφικό</a>
+    <a href="#research" onclick="closeDrawer()">Έρευνα</a>
+    <a href="#teaching" onclick="closeDrawer()">Διδασκαλία</a>
+    <a href="#contact" onclick="closeDrawer()">Επικοινωνία</a>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="profile-photo-wrap" style="margin-bottom:2rem;">
+        <img src="photo.png" alt="Ευάγγελος Ζτούπας" />
+      </div>
+            <div class="hero-label">Φυσικός &amp; Εκπαιδευτικός</div>
+      <h1 class="hero-name">Ευάγγελος<br /><strong>Ζτούπας</strong></h1>
+      <div class="hero-divider"></div>
+      <p class="hero-desc">
+        Μόνιμος Εκπαιδευτικός Δευτεροβάθμιας Εκπαίδευσης και Υποψήφιος Διδάκτορας στο Α.Π.Θ. Ερευνητικά ενδιαφέροντα στην αξιοποίηση της Εκπαιδευτικής Ρομποτικής στις Θετικές Επιστήμες.
+      </p>
+      <div class="hero-ctas">
+        <a href="#about" class="btn fill">Βιογραφικό</a>
+        <a href="#research" class="btn">Έρευνα</a>
+        <a href="#contact" class="btn">Επικοινωνία</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="sec-label">Βιογραφικό</div>
+      <h2 class="sec-title">Ακαδημαϊκό &amp; <b>Επαγγελματικό</b> Προφίλ</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Είμαι Φυσικός και Μόνιμος Εκπαιδευτικός στη Δευτεροβάθμια Εκπαίδευση. Στόχος μου είναι η δημιουργία εκπαιδευτικών εμπειριών που αναπτύσσουν κριτική σκέψη και επιστημονικό πνεύμα.
+          </p>
+          <p>
+            Κατέχω δύο Μεταπτυχιακά Διπλώματα στις Επιστήμες της Αγωγής — ένα με εστίαση στην Ειδική Εκπαίδευση και ένα στις Ήπιες &amp; Ψηφιακές Δεξιότητες. Ο συνδυασμός αυτός μου επιτρέπει να σχεδιάζω παρεμβάσεις για διαφορετικούς μαθητές.
+          </p>
+          <p>
+            Εκπονώ Διδακτορική Διατριβή στο Α.Π.Θ. με αντικείμενο τη χρήση της Εκπαιδευτικής Ρομποτικής στις Φυσικές Επιστήμες.
+          </p>
+        </div>
+        <ul class="degrees">
+          <li class="degree-item">
+            <div class="di-label">Διδακτορική Διατριβή</div>
+            <div class="di-title">Εκπαιδευτική Ρομποτική στις Θετικές Επιστήμες</div>
+            <div class="di-sub">Α.Π.Θ. — Υποψήφιος Διδάκτορας</div>
+          </li>
+          <li class="degree-item">
+            <div class="di-label">Μεταπτυχιακό</div>
+            <div class="di-title">Επιστήμες Αγωγής — Ειδική Εκπαίδευση</div>
+            <div class="di-sub">Μεταπτυχιακό Δίπλωμα Εξειδίκευσης</div>
+          </li>
+          <li class="degree-item">
+            <div class="di-label">Μεταπτυχιακό</div>
+            <div class="di-title">Επιστήμες Αγωγής — Ήπιες &amp; Ψηφιακές Δεξιότητες</div>
+            <div class="di-sub">Μεταπτυχιακό Δίπλωμα Εξειδίκευσης</div>
+          </li>
+          <li class="degree-item">
+            <div class="di-label">Βασικό Πτυχίο</div>
+            <div class="di-title">Φυσική</div>
+            <div class="di-sub">Μόνιμος Εκπαιδευτικός Δ.Ε.</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section id="research">
+      <div class="sec-label">Έρευνα</div>
+      <h2 class="sec-title">Ερευνητικά <b>Ενδιαφέροντα</b></h2>
+      <div class="research-list">
+        <div class="research-item">
+          <div class="ri-num">01</div>
+          <div class="ri-title">Εκπαιδευτική Ρομποτική</div>
+          <div class="ri-body">Αξιοποίηση ρομποτικών πλατφορμών για βιωματική μάθηση εννοιών Φυσικής και STEM. Αντικείμενο της διδακτορικής διατριβής στο Α.Π.Θ.</div>
+        </div>
+        <div class="research-item">
+          <div class="ri-num">02</div>
+          <div class="ri-title">Συμπεριληπτική Εκπαίδευση</div>
+          <div class="ri-body">Σχεδιασμός παρεμβάσεων για μαθητές με ειδικές εκπαιδευτικές ανάγκες στις φυσικές επιστήμες, με έμφαση στην πρόσβαση και συμμετοχή.</div>
+        </div>
+        <div class="research-item">
+          <div class="ri-num">03</div>
+          <div class="ri-title">Ψηφιακές Δεξιότητες</div>
+          <div class="ri-body">Ενσωμάτωση ψηφιακών εργαλείων και ανάπτυξη ήπιων δεξιοτήτων — κριτική σκέψη, συνεργασία, επικοινωνία — σε STEM πλαίσιο.</div>
+        </div>
+        <div class="research-item">
+          <div class="ri-num">04</div>
+          <div class="ri-title">Διδακτική Φυσικών Επιστημών</div>
+          <div class="ri-body">Ανάπτυξη καινοτόμων διδακτικών προσεγγίσεων μέσω project-based learning, εργαστηριακής έρευνας και τεχνολογικής υποστήριξης.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEACHING -->
+    <section id="teaching">
+      <div class="sec-label">Διδασκαλία</div>
+      <h2 class="sec-title">Εκπαιδευτική <b>Δράση</b></h2>
+      <ul class="teaching-list">
+        <li class="teaching-item">
+          <div class="ti-num">01</div>
+          <div>
+            <div class="ti-title">Φυσική Γυμνασίου &amp; Λυκείου</div>
+            <div class="ti-body">Διδασκαλία με βαρύτητα στη βαθιά κατανόηση εννοιών και στη σύνδεση θεωρίας-πράξης.</div>
+          </div>
+        </li>
+        <li class="teaching-item">
+          <div class="ti-num">02</div>
+          <div>
+            <div class="ti-title">Εργαστηριακή Φυσική &amp; STEM</div>
+            <div class="ti-body">Οργάνωση εργαστηριακών δραστηριοτήτων και διεπιστημονικών προγραμμάτων Φυσικής, Τεχνολογίας και Μηχανικής.</div>
+          </div>
+        </li>
+        <li class="teaching-item">
+          <div class="ti-num">03</div>
+          <div>
+            <div class="ti-title">Εκπαιδευτική Ρομποτική</div>
+            <div class="ti-body">Εισαγωγή ρομποτικών συστημάτων (Arduino, micro:bit, LEGO) για βιωματική μάθηση στις θετικές επιστήμες.</div>
+          </div>
+        </li>
+        <li class="teaching-item">
+          <div class="ti-num">04</div>
+          <div>
+            <div class="ti-title">Ψηφιακή Εκπαίδευση</div>
+            <div class="ti-body">Ενσωμάτωση ψηφιακών εργαλείων και εκπαιδευτικών πλατφορμών στην καθημερινή διδακτική πρακτική.</div>
+          </div>
+        </li>
+        <li class="teaching-item">
+          <div class="ti-num">05</div>
+          <div>
+            <div class="ti-title">Συμπεριληπτική Τάξη</div>
+            <div class="ti-body">Διαφοροποιημένη διδασκαλία και παρεμβάσεις για μαθητές με ειδικές εκπαιδευτικές ανάγκες.</div>
+          </div>
+        </li>
+        <li class="teaching-item">
+          <div class="ti-num">06</div>
+          <div>
+            <div class="ti-title">Προετοιμασία Πανελλαδικών</div>
+            <div class="ti-body">Συστηματική προετοιμασία Γ' Λυκείου για Φυσική, με έμφαση στη μεθοδολογία και επίλυση ασκήσεων.</div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="sec-label">Επικοινωνία</div>
+      <h2 class="sec-title">Ας <b>Μιλήσουμε</b></h2>
+
+      <a href="mailto:ztoupas@gmail.com" class="contact-row">
+        <span class="cr-label">Email</span>
+        <span class="cr-value">ztoupas@gmail.com</span>
+        <span class="cr-arrow">→</span>
+      </a>
+      <a href="https://www.auth.gr" target="_blank" rel="noopener" class="contact-row">
+        <span class="cr-label">Ίδρυμα</span>
+        <span class="cr-value">Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης</span>
+        <span class="cr-arrow">→</span>
+      </a>
+      <a href="https://www.linkedin.com/in/vangelis-ztoupas-17908616a/" target="_blank" rel="noopener" class="contact-row">
+        <span class="cr-label">LinkedIn</span>
+        <span class="cr-value">linkedin.com/in/vangelis-ztoupas</span>
+        <span class="cr-arrow">→</span>
+      </a>
+    </section>
+
+  </main>
+
+  <script>
+    // Mobile menu
+    const btn = document.getElementById('mobileBtn');
+    const drawer = document.getElementById('mobileDrawer');
+    btn.addEventListener('click', () => drawer.classList.toggle('open'));
+    function closeDrawer() { drawer.classList.remove('open'); }
+
+    // Active nav link highlight on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.sidenav-links a');
+
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(a => a.classList.remove('active'));
+          const active = document.querySelector(`.sidenav-links a[href="#${e.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { threshold: 0.4 });
+
+    sections.forEach(s => navObserver.observe(s));
+
+    // Fade-in from bottom on scroll
+    const fadeEls = document.querySelectorAll(
+      '.profile-photo-wrap, .hero-label, .hero-name, .hero-divider, .hero-desc, .hero-ctas,' +
+      '.sec-label, .sec-title, .about-text, .degree-item,' +
+      '.research-item, .teaching-item, .contact-row'
+    );
+
+    fadeEls.forEach((el, i) => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(28px)';
+      el.style.transition = `opacity 0.6s ease ${(i % 6) * 0.08}s, transform 0.6s ease ${(i % 6) * 0.08}s`;
+    });
+
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+          fadeObserver.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    fadeEls.forEach(el => fadeObserver.observe(el));
+  </script>
+</body>
+</html>
