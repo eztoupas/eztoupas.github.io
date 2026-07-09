@@ -344,7 +344,7 @@
         <img src="photo.png" alt="Ευάγγελος Ζτούπας" />
       </div>
       <div class="hero-label" data-gr="Φυσικός &amp; Υπ. Διδάκτωρ Α.Π.Θ." data-en="Physicist &amp; PhD Candidate, AUTH">Φυσικός &amp; Υπ. Διδάκτωρ Α.Π.Θ.</div>
-      <h1 class="hero-name">Ευάγγελος<br /><strong>Ζτούπας</strong></h1>
+      <h1 class="hero-name" id="hero-name">Ευάγγελος<br /><strong>Ζτούπας</strong></h1>
       <div class="hero-divider"></div>
       <p class="hero-desc" data-gr="Μόνιμος Εκπαιδευτικός Δευτεροβάθμιας Εκπαίδευσης και Υποψήφιος Διδάκτορας στο Α.Π.Θ. Ερευνητικά ενδιαφέροντα στην αξιοποίηση της Εκπαιδευτικής Ρομποτικής στις Θετικές Επιστήμες." data-en="Permanent Secondary Education Teacher and PhD Candidate at Aristotle University of Thessaloniki. Research interests in the use of Educational Robotics in Science Education.">
         Μόνιμος Εκπαιδευτικός Δευτεροβάθμιας Εκπαίδευσης και Υποψήφιος Διδάκτορας στο Α.Π.Θ. Ερευνητικά ενδιαφέροντα στην αξιοποίηση της Εκπαιδευτικής Ρομποτικής στις Θετικές Επιστήμες.
@@ -562,24 +562,32 @@
     }, { threshold: 0.12 });
     fadeEls.forEach(el => fadeObserver.observe(el));
 
+    // Init language on load
+    window.addEventListener('DOMContentLoaded', () => setLang('gr'));
+
     // ── LANGUAGE TOGGLE ──
     let currentLang = 'gr';
 
     function setLang(lang) {
       currentLang = lang;
 
-      // Update all lang buttons
       document.querySelectorAll('.lang-btn, .mobile-lang button').forEach(b => {
         b.classList.toggle('active', b.textContent.toLowerCase() === lang);
       });
 
-      // Update html lang attr
       document.documentElement.lang = lang === 'gr' ? 'el' : 'en';
 
-      // Swap all elements with data-gr / data-en
       document.querySelectorAll('[data-gr][data-en]').forEach(el => {
         el.innerHTML = el.dataset[lang];
       });
+
+      // Swap name
+      const nameEl = document.getElementById('hero-name');
+      if (lang === 'gr') {
+        nameEl.innerHTML = 'Ευάγγελος<br /><strong>Ζτούπας</strong>';
+      } else {
+        nameEl.innerHTML = 'Evangelos<br /><strong>Ztoupas</strong>';
+      }
     }
   </script>
 </body>
