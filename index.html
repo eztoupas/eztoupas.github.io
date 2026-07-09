@@ -324,20 +324,18 @@
     }
 
     /* ── CONTACT ── */
-    #contact { background: var(--black); }
-    #contact .sec-label { color: #555; }
-    #contact .sec-title { color: var(--white); }
+    #contact { background: #F0F4F9; }
 
     .contact-row {
       display: flex;
       align-items: center;
       gap: 32px;
       padding: 28px 0;
-      border-bottom: 1px solid #222;
+      border-bottom: 1px solid var(--border);
       text-decoration: none;
       transition: padding-left 0.2s;
     }
-    .contact-row:first-of-type { border-top: 1px solid #222; }
+    .contact-row:first-of-type { border-top: 1px solid var(--border); }
     .contact-row:hover { padding-left: 8px; }
 
     .cr-label {
@@ -345,22 +343,22 @@
       font-weight: 500;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #555;
+      color: var(--light);
       width: 100px;
       flex-shrink: 0;
     }
     .cr-value {
       font-size: 0.95rem;
       font-weight: 300;
-      color: var(--white);
+      color: var(--dark);
     }
     .cr-arrow {
       margin-left: auto;
-      color: #444;
+      color: var(--border);
       font-size: 1rem;
       transition: color 0.2s;
     }
-    .contact-row:hover .cr-arrow { color: var(--white); }
+    .contact-row:hover .cr-arrow { color: var(--dark); }
 
     /* ── MOBILE ── */
     .mobile-nav {
@@ -479,6 +477,7 @@
       <li><a href="#about">Βιογραφικό</a></li>
       <li><a href="#research">Έρευνα</a></li>
       <li><a href="#teaching">Διδασκαλία</a></li>
+      <li><a href="#publications">Δημοσιεύσεις</a></li>
       <li><a href="#contact">Επικοινωνία</a></li>
     </ul>
     <div class="sidenav-bottom">© 2026</div>
@@ -496,6 +495,7 @@
     <a href="#about" onclick="closeDrawer()">Βιογραφικό</a>
     <a href="#research" onclick="closeDrawer()">Έρευνα</a>
     <a href="#teaching" onclick="closeDrawer()">Διδασκαλία</a>
+    <a href="#publications" onclick="closeDrawer()">Δημοσιεύσεις</a>
     <a href="#contact" onclick="closeDrawer()">Επικοινωνία</a>
   </div>
 
@@ -633,6 +633,25 @@
           <div>
             <div class="ti-title">Προετοιμασία Πανελλαδικών</div>
             <div class="ti-body">Συστηματική προετοιμασία Γ' Λυκείου για Φυσική, με έμφαση στη μεθοδολογία και επίλυση ασκήσεων.</div>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <div class="sec-label">Δημοσιεύσεις</div>
+      <h2 class="sec-title">Ερευνητικό <b>Έργο</b></h2>
+      <ul class="teaching-list">
+        <li class="teaching-item">
+          <div class="ti-num">2026</div>
+          <div>
+            <div class="ti-title">Simulators in Educational Robotics: A Systematic Review with Content Analysis</div>
+            <div class="ti-body">
+              Ztoupas, E., Sapounidis, T. &amp; Tselegkaridis, S.<br/>
+              <em>Applied Sciences</em>, 16(2), 653. &nbsp;·&nbsp;
+              <a href="https://doi.org/10.3390/app16020653" target="_blank" rel="noopener" style="color:var(--navy-accent);text-decoration:none;font-weight:500;">DOI: 10.3390/app16020653 →</a>
+            </div>
           </div>
         </li>
       </ul>
