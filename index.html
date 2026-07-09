@@ -297,7 +297,7 @@
 
   <!-- SIDE NAV (desktop) -->
   <nav class="sidenav">
-    <div class="sidenav-name">Ε. Ζτούπας</div>
+    <div class="sidenav-name" id="sidenav-name">Ε. Ζτούπας</div>
     <div class="sidenav-role" data-gr="Φυσικός" data-en="Physicist">Φυσικός</div>
     <ul class="sidenav-links">
       <li><a href="#hero"         data-gr="Αρχική"        data-en="Home">Αρχική</a></li>
@@ -316,7 +316,7 @@
 
   <!-- MOBILE NAV -->
   <div class="mobile-nav">
-    <span class="mobile-nav-name">Ε. Ζτούπας</span>
+    <span class="mobile-nav-name" id="mobile-nav-name">Ε. Ζτούπας</span>
     <div class="mobile-right">
       <div class="mobile-lang">
         <button class="active" onclick="setLang('gr')">GR</button>
@@ -583,10 +583,16 @@
 
       // Swap name
       const nameEl = document.getElementById('hero-name');
+      const sideNameEl = document.getElementById('sidenav-name');
+      const mobileNameEl = document.getElementById('mobile-nav-name');
       if (lang === 'gr') {
         nameEl.innerHTML = 'Ευάγγελος<br /><strong>Ζτούπας</strong>';
+        sideNameEl.textContent = 'Ε. Ζτούπας';
+        mobileNameEl.textContent = 'Ε. Ζτούπας';
       } else {
         nameEl.innerHTML = 'Evangelos<br /><strong>Ztoupas</strong>';
+        sideNameEl.textContent = 'E. Ztoupas';
+        mobileNameEl.textContent = 'E. Ztoupas';
       }
     }
   </script>
