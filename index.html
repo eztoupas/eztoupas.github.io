@@ -298,18 +298,19 @@
   <!-- SIDE NAV (desktop) -->
   <nav class="sidenav">
     <div class="sidenav-name" id="sidenav-name">Ε. Ζτούπας</div>
-    <div class="sidenav-role" data-gr="Φυσικός" data-en="Physicist">Φυσικός</div>
+    <div class="sidenav-role" data-gr="Φυσικός" data-en="Physicist" data-de="Physiker">Φυσικός</div>
     <ul class="sidenav-links">
-      <li><a href="#hero"         data-gr="Αρχική"        data-en="Home">Αρχική</a></li>
-      <li><a href="#about"        data-gr="Βιογραφικό"    data-en="About">Βιογραφικό</a></li>
-      <li><a href="#research"     data-gr="Έρευνα"        data-en="Research">Έρευνα</a></li>
-      <li><a href="#teaching"     data-gr="Διδασκαλία"    data-en="Teaching">Διδασκαλία</a></li>
-      <li><a href="#publications" data-gr="Δημοσιεύσεις" data-en="Publications">Δημοσιεύσεις</a></li>
-      <li><a href="#contact"      data-gr="Επικοινωνία"   data-en="Contact">Επικοινωνία</a></li>
+      <li><a href="#hero"         data-gr="Αρχική" data-en="Home" data-de="Startseite">Αρχική</a></li>
+      <li><a href="#about"        data-gr="Βιογραφικό" data-en="About" data-de="Profil" data-de="Profil">Βιογραφικό</a></li>
+      <li><a href="#research"     data-gr="Έρευνα" data-en="Research" data-de="Forschung" data-de="Forschung">Έρευνα</a></li>
+      <li><a href="#teaching"     data-gr="Διδασκαλία" data-en="Teaching" data-de="Lehre">Διδασκαλία</a></li>
+      <li><a href="#publications" data-gr="Δημοσιεύσεις" data-en="Publications" data-de="Publikationen" data-de="Publikationen">Δημοσιεύσεις</a></li>
+      <li><a href="#contact"      data-gr="Επικοινωνία" data-en="Contact" data-de="Kontakt">Επικοινωνία</a></li>
     </ul>
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="setLang('gr')">GR</button>
       <button class="lang-btn"        onclick="setLang('en')">EN</button>
+      <button class="lang-btn"        onclick="setLang('de')">DE</button>
     </div>
     <div class="sidenav-bottom">© 2026</div>
   </nav>
@@ -321,6 +322,7 @@
       <div class="mobile-lang">
         <button class="active" onclick="setLang('gr')">GR</button>
         <button onclick="setLang('en')">EN</button>
+        <button onclick="setLang('de')">DE</button>
       </div>
       <button class="mobile-menu-btn" id="mobileBtn" aria-label="Μενού">
         <span></span><span></span><span></span>
@@ -328,12 +330,12 @@
     </div>
   </div>
   <div class="mobile-drawer" id="mobileDrawer">
-    <a href="#hero"         onclick="closeDrawer()" data-gr="Αρχική"        data-en="Home">Αρχική</a>
-    <a href="#about"        onclick="closeDrawer()" data-gr="Βιογραφικό"    data-en="About">Βιογραφικό</a>
-    <a href="#research"     onclick="closeDrawer()" data-gr="Έρευνα"        data-en="Research">Έρευνα</a>
-    <a href="#teaching"     onclick="closeDrawer()" data-gr="Διδασκαλία"    data-en="Teaching">Διδασκαλία</a>
-    <a href="#publications" onclick="closeDrawer()" data-gr="Δημοσιεύσεις" data-en="Publications">Δημοσιεύσεις</a>
-    <a href="#contact"      onclick="closeDrawer()" data-gr="Επικοινωνία"   data-en="Contact">Επικοινωνία</a>
+    <a href="#hero"         onclick="closeDrawer()" data-gr="Αρχική" data-en="Home" data-de="Startseite">Αρχική</a>
+    <a href="#about"        onclick="closeDrawer()" data-gr="Βιογραφικό" data-en="About" data-de="Profil" data-de="Profil">Βιογραφικό</a>
+    <a href="#research"     onclick="closeDrawer()" data-gr="Έρευνα" data-en="Research" data-de="Forschung" data-de="Forschung">Έρευνα</a>
+    <a href="#teaching"     onclick="closeDrawer()" data-gr="Διδασκαλία" data-en="Teaching" data-de="Lehre">Διδασκαλία</a>
+    <a href="#publications" onclick="closeDrawer()" data-gr="Δημοσιεύσεις" data-en="Publications" data-de="Publikationen" data-de="Publikationen">Δημοσιεύσεις</a>
+    <a href="#contact"      onclick="closeDrawer()" data-gr="Επικοινωνία" data-en="Contact" data-de="Kontakt">Επικοινωνία</a>
   </div>
 
   <main>
@@ -343,57 +345,57 @@
       <div class="profile-photo-wrap">
         <img src="photo.png" alt="Ευάγγελος Ζτούπας" />
       </div>
-      <div class="hero-label" data-gr="Φυσικός &amp; Υπ. Διδάκτωρ Α.Π.Θ." data-en="Physicist &amp; PhD Candidate, AUTH">Φυσικός &amp; Υπ. Διδάκτωρ Α.Π.Θ.</div>
+      <div class="hero-label" data-gr="Φυσικός &amp; Υπ. Διδάκτωρ Α.Π.Θ." data-en="Physicist &amp; PhD Candidate, AUTH" data-de="Physiker &amp; Doktorand, AUTH">Φυσικός &amp; Υπ. Διδάκτωρ Α.Π.Θ.</div>
       <h1 class="hero-name" id="hero-name">Ευάγγελος<br /><strong>Ζτούπας</strong></h1>
       <div class="hero-divider"></div>
-      <p class="hero-desc" data-gr="Μόνιμος Εκπαιδευτικός Δευτεροβάθμιας Εκπαίδευσης και Υποψήφιος Διδάκτορας στο Α.Π.Θ. Ερευνητικά ενδιαφέροντα στην αξιοποίηση της Εκπαιδευτικής Ρομποτικής στις Θετικές Επιστήμες." data-en="Permanent Secondary Education Teacher and PhD Candidate at Aristotle University of Thessaloniki. Research interests in the use of Educational Robotics in Science Education.">
+      <p class="hero-desc" data-gr="Μόνιμος Εκπαιδευτικός Δευτεροβάθμιας Εκπαίδευσης και Υποψήφιος Διδάκτορας στο Α.Π.Θ. Ερευνητικά ενδιαφέροντα στην αξιοποίηση της Εκπαιδευτικής Ρομποτικής στις Θετικές Επιστήμες." data-en="Permanent Secondary Education Teacher and PhD Candidate at Aristotle University of Thessaloniki. Research interests in the use of Educational Robotics in Science Education." data-de="Verbeamteter Lehrer an der Sekundarstufe und Doktorand an der Aristoteles-Universität Thessaloniki. Forschungsinteressen im Bereich Bildungsrobotik in den Naturwissenschaften.">
         Μόνιμος Εκπαιδευτικός Δευτεροβάθμιας Εκπαίδευσης και Υποψήφιος Διδάκτορας στο Α.Π.Θ. Ερευνητικά ενδιαφέροντα στην αξιοποίηση της Εκπαιδευτικής Ρομποτικής στις Θετικές Επιστήμες.
       </p>
       <div class="hero-ctas">
-        <a href="#about"   class="btn fill" data-gr="Βιογραφικό" data-en="About">Βιογραφικό</a>
-        <a href="#research" class="btn"     data-gr="Έρευνα"     data-en="Research">Έρευνα</a>
-        <a href="#contact"  class="btn"     data-gr="Επικοινωνία" data-en="Contact">Επικοινωνία</a>
+        <a href="#about"   class="btn fill" data-gr="Βιογραφικό" data-en="About" data-de="Profil" data-de="Profil" data-de="Profil">Βιογραφικό</a>
+        <a href="#research" class="btn"     data-gr="Έρευνα" data-en="Research" data-de="Forschung" data-de="Forschung">Έρευνα</a>
+        <a href="#contact"  class="btn"     data-gr="Επικοινωνία" data-en="Contact" data-de="Kontakt">Επικοινωνία</a>
       </div>
     </section>
 
     <!-- ABOUT -->
     <section id="about">
-      <div class="sec-label" data-gr="Βιογραφικό" data-en="About">Βιογραφικό</div>
+      <div class="sec-label" data-gr="Βιογραφικό" data-en="About" data-de="Profil" data-de="Profil" data-de="Profil">Βιογραφικό</div>
       <h2 class="sec-title">
-        <span data-gr="Ακαδημαϊκό &amp; " data-en="Academic &amp; ">Ακαδημαϊκό &amp; </span><b data-gr="Επαγγελματικό Προφίλ" data-en="Professional Profile">Επαγγελματικό Προφίλ</b>
+        <span data-gr="Ακαδημαϊκό &amp; " data-en="Academic &amp; " data-de="Akademisches &amp; ">Ακαδημαϊκό &amp; </span><b data-gr="Επαγγελματικό Προφίλ" data-en="Professional Profile" data-de="Berufliches Profil">Επαγγελματικό Προφίλ</b>
       </h2>
       <div class="about-grid">
         <div class="about-text">
-          <p data-gr="Είμαι Φυσικός και Μόνιμος Εκπαιδευτικός στη Δευτεροβάθμια Εκπαίδευση. Στόχος μου είναι η δημιουργία εκπαιδευτικών εμπειριών που αναπτύσσουν κριτική σκέψη και επιστημονικό πνεύμα." data-en="I am a Physicist and Permanent Secondary Education Teacher. My goal is to create educational experiences that foster critical thinking and a scientific mindset.">
+          <p data-gr="Είμαι Φυσικός και Μόνιμος Εκπαιδευτικός στη Δευτεροβάθμια Εκπαίδευση. Στόχος μου είναι η δημιουργία εκπαιδευτικών εμπειριών που αναπτύσσουν κριτική σκέψη και επιστημονικό πνεύμα." data-en="I am a Physicist and Permanent Secondary Education Teacher. My goal is to create educational experiences that foster critical thinking and a scientific mindset." data-de="Ich bin Physiker und verbeamteter Lehrer der Sekundarstufe. Mein Ziel ist es, Lernerfahrungen zu schaffen, die kritisches Denken und wissenschaftliches Denken fördern.">
             Είμαι Φυσικός και Μόνιμος Εκπαιδευτικός στη Δευτεροβάθμια Εκπαίδευση. Στόχος μου είναι η δημιουργία εκπαιδευτικών εμπειριών που αναπτύσσουν κριτική σκέψη και επιστημονικό πνεύμα.
           </p>
-          <p data-gr="Κατέχω δύο Μεταπτυχιακά Διπλώματα στις Επιστήμες της Αγωγής — ένα με εστίαση στην Ειδική Εκπαίδευση και ένα στις Ήπιες &amp; Ψηφιακές Δεξιότητες. Ο συνδυασμός αυτός μου επιτρέπει να σχεδιάζω παρεμβάσεις για διαφορετικούς μαθητές." data-en="I hold two Master's degrees in Educational Sciences — one focused on Special Education and one on Soft &amp; Digital Skills. This combination allows me to design interventions for diverse learners.">
+          <p data-gr="Κατέχω δύο Μεταπτυχιακά Διπλώματα στις Επιστήμες της Αγωγής — ένα με εστίαση στην Ειδική Εκπαίδευση και ένα στις Ήπιες &amp; Ψηφιακές Δεξιότητες. Ο συνδυασμός αυτός μου επιτρέπει να σχεδιάζω παρεμβάσεις για διαφορετικούς μαθητές." data-en="I hold two Master's degrees in Educational Sciences — one focused on Special Education and one on Soft &amp; Digital Skills. This combination allows me to design interventions for diverse learners." data-de="Ich halte zwei Masterstudiengänge in Erziehungswissenschaften — einen mit Schwerpunkt Sonderpädagogik und einen in Soft- &amp; Digitalkompetenz. Diese Kombination ermöglicht mir, Interventionen für unterschiedliche Lernende zu gestalten.">
             Κατέχω δύο Μεταπτυχιακά Διπλώματα στις Επιστήμες της Αγωγής — ένα με εστίαση στην Ειδική Εκπαίδευση και ένα στις Ήπιες &amp; Ψηφιακές Δεξιότητες. Ο συνδυασμός αυτός μου επιτρέπει να σχεδιάζω παρεμβάσεις για διαφορετικούς μαθητές.
           </p>
-          <p data-gr="Εκπονώ Διδακτορική Διατριβή στο Α.Π.Θ. με αντικείμενο την αξιοποίηση της Εκπαιδευτικής Ρομποτικής στη Διδασκαλία των Θετικών Επιστημών." data-en="I am pursuing a PhD at the Aristotle University of Thessaloniki, focusing on the utilisation of Educational Robotics in Science Teaching.">
+          <p data-gr="Εκπονώ Διδακτορική Διατριβή στο Α.Π.Θ. με αντικείμενο την αξιοποίηση της Εκπαιδευτικής Ρομποτικής στη Διδασκαλία των Θετικών Επιστημών." data-en="I am pursuing a PhD at the Aristotle University of Thessaloniki, focusing on the utilisation of Educational Robotics in Science Teaching." data-de="Ich promoviere an der Aristoteles-Universität Thessaloniki mit dem Schwerpunkt Einsatz von Bildungsrobotik im naturwissenschaftlichen Unterricht.">
             Εκπονώ Διδακτορική Διατριβή στο Α.Π.Θ. με αντικείμενο την αξιοποίηση της Εκπαιδευτικής Ρομποτικής στη Διδασκαλία των Θετικών Επιστημών.
           </p>
         </div>
         <ul class="degrees">
           <li class="degree-item">
-            <div class="di-label" data-gr="Διδακτορική Διατριβή" data-en="PhD Candidate">Διδακτορική Διατριβή</div>
-            <div class="di-title" data-gr="Εκπαιδευτική Ρομποτική στη Διδασκαλία των Θετικών Επιστημών" data-en="Educational Robotics in Science Teaching">Εκπαιδευτική Ρομποτική στη Διδασκαλία των Θετικών Επιστημών</div>
-            <div class="di-sub"><a href="https://www.edlit.auth.gr/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;" data-gr="Τμήμα Φιλοσοφίας &amp; Παιδαγωγικής, Α.Π.Θ." data-en="Dept. of Philosophy &amp; Education, AUTH">Τμήμα Φιλοσοφίας &amp; Παιδαγωγικής, Α.Π.Θ.</a></div>
+            <div class="di-label" data-gr="Διδακτορική Διατριβή" data-en="PhD Candidate" data-de="Doktorarbeit">Διδακτορική Διατριβή</div>
+            <div class="di-title" data-gr="Εκπαιδευτική Ρομποτική στη Διδασκαλία των Θετικών Επιστημών" data-en="Educational Robotics in Science Teaching" data-de="Bildungsrobotik im naturwissenschaftlichen Unterricht">Εκπαιδευτική Ρομποτική στη Διδασκαλία των Θετικών Επιστημών</div>
+            <div class="di-sub"><a href="https://www.edlit.auth.gr/" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;" data-gr="Τμήμα Φιλοσοφίας &amp; Παιδαγωγικής, Α.Π.Θ." data-en="Dept. of Philosophy &amp; Education, AUTH" data-de="Fachbereich Philosophie &amp; Pädagogik, AUTH">Τμήμα Φιλοσοφίας &amp; Παιδαγωγικής, Α.Π.Θ.</a></div>
           </li>
           <li class="degree-item">
-            <div class="di-label" data-gr="Μεταπτυχιακό" data-en="Master's Degree">Μεταπτυχιακό</div>
-            <div class="di-title" data-gr="Επιστήμες Αγωγής — Ειδική Εκπαίδευση" data-en="Educational Sciences — Special Education">Επιστήμες Αγωγής — Ειδική Εκπαίδευση</div>
-            <div class="di-sub" data-gr="Πανεπιστήμιο Λευκωσίας (UNIC)" data-en="University of Nicosia (UNIC)">Πανεπιστήμιο Λευκωσίας (UNIC)</div>
+            <div class="di-label" data-gr="Μεταπτυχιακό" data-en="Master's Degree" data-de="Masterstudium">Μεταπτυχιακό</div>
+            <div class="di-title" data-gr="Επιστήμες Αγωγής — Ειδική Εκπαίδευση" data-en="Educational Sciences — Special Education" data-de="Erziehungswissenschaften — Sonderpädagogik">Επιστήμες Αγωγής — Ειδική Εκπαίδευση</div>
+            <div class="di-sub" data-gr="Πανεπιστήμιο Λευκωσίας (UNIC)" data-en="University of Nicosia (UNIC)" data-de="Universität Nikosia (UNIC)">Πανεπιστήμιο Λευκωσίας (UNIC)</div>
           </li>
           <li class="degree-item">
-            <div class="di-label" data-gr="Μεταπτυχιακό" data-en="Master's Degree">Μεταπτυχιακό</div>
-            <div class="di-title" data-gr="Επιστήμες Αγωγής — Ήπιες &amp; Ψηφιακές Δεξιότητες" data-en="Educational Sciences — Soft &amp; Digital Skills">Επιστήμες Αγωγής — Ήπιες &amp; Ψηφιακές Δεξιότητες</div>
-            <div class="di-sub" data-gr="ΔΙ.ΠΑ.Ε. — Διεθνές Πανεπιστήμιο (IHU)" data-en="International Hellenic University (IHU)">ΔΙ.ΠΑ.Ε. — Διεθνές Πανεπιστήμιο (IHU)</div>
+            <div class="di-label" data-gr="Μεταπτυχιακό" data-en="Master's Degree" data-de="Masterstudium">Μεταπτυχιακό</div>
+            <div class="di-title" data-gr="Επιστήμες Αγωγής — Ήπιες &amp; Ψηφιακές Δεξιότητες" data-en="Educational Sciences — Soft &amp; Digital Skills" data-de="Erziehungswissenschaften — Soft- &amp; Digitalkompetenzen">Επιστήμες Αγωγής — Ήπιες &amp; Ψηφιακές Δεξιότητες</div>
+            <div class="di-sub" data-gr="ΔΙ.ΠΑ.Ε. — Διεθνές Πανεπιστήμιο (IHU)" data-en="International Hellenic University (IHU)" data-de="Internationale Griechische Universität (IHU)">ΔΙ.ΠΑ.Ε. — Διεθνές Πανεπιστήμιο (IHU)</div>
           </li>
           <li class="degree-item">
-            <div class="di-label" data-gr="Βασικό Πτυχίο" data-en="Bachelor's Degree">Βασικό Πτυχίο</div>
-            <div class="di-title" data-gr="Φυσική" data-en="Physics">Φυσική</div>
-            <div class="di-sub" data-gr="Τμήμα Φυσικής, Α.Π.Θ." data-en="Dept. of Physics, AUTH">Τμήμα Φυσικής, Α.Π.Θ.</div>
+            <div class="di-label" data-gr="Βασικό Πτυχίο" data-en="Bachelor's Degree" data-de="Bachelorstudium">Βασικό Πτυχίο</div>
+            <div class="di-title" data-gr="Φυσική" data-en="Physics" data-de="Physik">Φυσική</div>
+            <div class="di-sub" data-gr="Τμήμα Φυσικής, Α.Π.Θ." data-en="Dept. of Physics, AUTH" data-de="Fachbereich Physik, AUTH">Τμήμα Φυσικής, Α.Π.Θ.</div>
           </li>
         </ul>
       </div>
@@ -401,77 +403,77 @@
 
     <!-- RESEARCH -->
     <section id="research">
-      <div class="sec-label" data-gr="Έρευνα" data-en="Research">Έρευνα</div>
-      <h2 class="sec-title"><b data-gr="Ερευνητικά Ενδιαφέροντα" data-en="Research Interests">Ερευνητικά Ενδιαφέροντα</b></h2>
+      <div class="sec-label" data-gr="Έρευνα" data-en="Research" data-de="Forschung" data-de="Forschung">Έρευνα</div>
+      <h2 class="sec-title"><b data-gr="Ερευνητικά Ενδιαφέροντα" data-en="Research Interests" data-de="Forschungsinteressen">Ερευνητικά Ενδιαφέροντα</b></h2>
       <div class="research-list">
         <div class="research-item">
           <div class="ri-num">01</div>
-          <div class="ri-title" data-gr="Εκπαιδευτική Ρομποτική" data-en="Educational Robotics">Εκπαιδευτική Ρομποτική</div>
-          <div class="ri-body" data-gr="Αξιοποίηση ρομποτικών πλατφορμών για βιωματική μάθηση εννοιών Φυσικής και STEM. Αντικείμενο της διδακτορικής διατριβής στο Α.Π.Θ." data-en="Utilisation of robotic platforms for hands-on learning of Physics and STEM concepts. Core subject of the PhD thesis at AUTH.">Αξιοποίηση ρομποτικών πλατφορμών για βιωματική μάθηση εννοιών Φυσικής και STEM. Αντικείμενο της διδακτορικής διατριβής στο Α.Π.Θ.</div>
+          <div class="ri-title" data-gr="Εκπαιδευτική Ρομποτική" data-en="Educational Robotics" data-de="Bildungsrobotik">Εκπαιδευτική Ρομποτική</div>
+          <div class="ri-body" data-gr="Αξιοποίηση ρομποτικών πλατφορμών για βιωματική μάθηση εννοιών Φυσικής και STEM. Αντικείμενο της διδακτορικής διατριβής στο Α.Π.Θ." data-en="Utilisation of robotic platforms for hands-on learning of Physics and STEM concepts. Core subject of the PhD thesis at AUTH." data-de="Einsatz robotischer Plattformen für erfahrungsbasiertes Lernen von Physik- und STEM-Konzepten. Kernthema der Doktorarbeit an der AUTH.">Αξιοποίηση ρομποτικών πλατφορμών για βιωματική μάθηση εννοιών Φυσικής και STEM. Αντικείμενο της διδακτορικής διατριβής στο Α.Π.Θ.</div>
         </div>
         <div class="research-item">
           <div class="ri-num">02</div>
-          <div class="ri-title" data-gr="Ψηφιακές Δεξιότητες" data-en="Digital Skills">Ψηφιακές Δεξιότητες</div>
-          <div class="ri-body" data-gr="Ενσωμάτωση ψηφιακών εργαλείων και ανάπτυξη ήπιων δεξιοτήτων — κριτική σκέψη, συνεργασία, επικοινωνία — σε STEM πλαίσιο." data-en="Integration of digital tools and development of soft skills — critical thinking, collaboration, communication — in a STEM context.">Ενσωμάτωση ψηφιακών εργαλείων και ανάπτυξη ήπιων δεξιοτήτων — κριτική σκέψη, συνεργασία, επικοινωνία — σε STEM πλαίσιο.</div>
+          <div class="ri-title" data-gr="Ψηφιακές Δεξιότητες" data-en="Digital Skills" data-de="Digitalkompetenzen">Ψηφιακές Δεξιότητες</div>
+          <div class="ri-body" data-gr="Ενσωμάτωση ψηφιακών εργαλείων και ανάπτυξη ήπιων δεξιοτήτων — κριτική σκέψη, συνεργασία, επικοινωνία — σε STEM πλαίσιο." data-en="Integration of digital tools and development of soft skills — critical thinking, collaboration, communication — in a STEM context." data-de="Integration digitaler Werkzeuge und Entwicklung von Soft Skills — kritisches Denken, Zusammenarbeit, Kommunikation — im STEM-Kontext.">Ενσωμάτωση ψηφιακών εργαλείων και ανάπτυξη ήπιων δεξιοτήτων — κριτική σκέψη, συνεργασία, επικοινωνία — σε STEM πλαίσιο.</div>
         </div>
         <div class="research-item">
           <div class="ri-num">03</div>
-          <div class="ri-title" data-gr="Διδακτική Φυσικών Επιστημών" data-en="Science Education Didactics">Διδακτική Φυσικών Επιστημών</div>
-          <div class="ri-body" data-gr="Ανάπτυξη καινοτόμων διδακτικών προσεγγίσεων μέσω project-based learning, εργαστηριακής έρευνας και τεχνολογικής υποστήριξης." data-en="Development of innovative teaching approaches through project-based learning, laboratory inquiry, and technology integration.">Ανάπτυξη καινοτόμων διδακτικών προσεγγίσεων μέσω project-based learning, εργαστηριακής έρευνας και τεχνολογικής υποστήριξης.</div>
+          <div class="ri-title" data-gr="Διδακτική Φυσικών Επιστημών" data-en="Science Education Didactics" data-de="Fachdidaktik Naturwissenschaften">Διδακτική Φυσικών Επιστημών</div>
+          <div class="ri-body" data-gr="Ανάπτυξη καινοτόμων διδακτικών προσεγγίσεων μέσω project-based learning, εργαστηριακής έρευνας και τεχνολογικής υποστήριξης." data-en="Development of innovative teaching approaches through project-based learning, laboratory inquiry, and technology integration." data-de="Entwicklung innovativer Lehrkonzepte durch projektbasiertes Lernen, Laborforschung und Technologieeinsatz.">Ανάπτυξη καινοτόμων διδακτικών προσεγγίσεων μέσω project-based learning, εργαστηριακής έρευνας και τεχνολογικής υποστήριξης.</div>
         </div>
         <div class="research-item">
           <div class="ri-num">04</div>
-          <div class="ri-title" data-gr="Συμπεριληπτική Εκπαίδευση" data-en="Inclusive Education">Συμπεριληπτική Εκπαίδευση</div>
-          <div class="ri-body" data-gr="Σχεδιασμός παρεμβάσεων για μαθητές με ειδικές εκπαιδευτικές ανάγκες στις φυσικές επιστήμες, με έμφαση στην πρόσβαση και συμμετοχή." data-en="Design of interventions for students with special educational needs in science, with a focus on access and participation.">Σχεδιασμός παρεμβάσεων για μαθητές με ειδικές εκπαιδευτικές ανάγκες στις φυσικές επιστήμες, με έμφαση στην πρόσβαση και συμμετοχή.</div>
+          <div class="ri-title" data-gr="Συμπεριληπτική Εκπαίδευση" data-en="Inclusive Education" data-de="Inklusive Bildung">Συμπεριληπτική Εκπαίδευση</div>
+          <div class="ri-body" data-gr="Σχεδιασμός παρεμβάσεων για μαθητές με ειδικές εκπαιδευτικές ανάγκες στις φυσικές επιστήμες, με έμφαση στην πρόσβαση και συμμετοχή." data-en="Design of interventions for students with special educational needs in science, with a focus on access and participation." data-de="Gestaltung von Interventionen für Schülerinnen und Schüler mit sonderpädagogischem Förderbedarf im Bereich Naturwissenschaften.">Σχεδιασμός παρεμβάσεων για μαθητές με ειδικές εκπαιδευτικές ανάγκες στις φυσικές επιστήμες, με έμφαση στην πρόσβαση και συμμετοχή.</div>
         </div>
       </div>
     </section>
 
     <!-- TEACHING -->
     <section id="teaching">
-      <div class="sec-label" data-gr="Διδασκαλία" data-en="Teaching">Διδασκαλία</div>
-      <h2 class="sec-title"><b data-gr="Εκπαιδευτική Δράση" data-en="Teaching Activity">Εκπαιδευτική Δράση</b></h2>
+      <div class="sec-label" data-gr="Διδασκαλία" data-en="Teaching" data-de="Lehre">Διδασκαλία</div>
+      <h2 class="sec-title"><b data-gr="Εκπαιδευτική Δράση" data-en="Teaching Activity" data-de="Lehrtätigkeit">Εκπαιδευτική Δράση</b></h2>
       <ul class="teaching-list">
         <li class="teaching-item">
           <div class="ti-num">01</div>
           <div>
-            <div class="ti-title" data-gr="Φυσική Γυμνασίου &amp; Λυκείου" data-en="Secondary School Physics">Φυσική Γυμνασίου &amp; Λυκείου</div>
-            <div class="ti-body" data-gr="Διδασκαλία με βαρύτητα στη βαθιά κατανόηση εννοιών και στη σύνδεση θεωρίας-πράξης." data-en="Teaching with emphasis on deep conceptual understanding and the connection between theory and practice.">Διδασκαλία με βαρύτητα στη βαθιά κατανόηση εννοιών και στη σύνδεση θεωρίας-πράξης.</div>
+            <div class="ti-title" data-gr="Φυσική Γυμνασίου &amp; Λυκείου" data-en="Secondary School Physics" data-de="Physik an der Sekundarstufe">Φυσική Γυμνασίου &amp; Λυκείου</div>
+            <div class="ti-body" data-gr="Διδασκαλία με βαρύτητα στη βαθιά κατανόηση εννοιών και στη σύνδεση θεωρίας-πράξης." data-en="Teaching with emphasis on deep conceptual understanding and the connection between theory and practice." data-de="Unterricht mit Schwerpunkt auf tiefem Konzeptverständnis und der Verbindung von Theorie und Praxis.">Διδασκαλία με βαρύτητα στη βαθιά κατανόηση εννοιών και στη σύνδεση θεωρίας-πράξης.</div>
           </div>
         </li>
         <li class="teaching-item">
           <div class="ti-num">02</div>
           <div>
-            <div class="ti-title" data-gr="Εργαστηριακή Φυσική &amp; STEM" data-en="Laboratory Physics &amp; STEM">Εργαστηριακή Φυσική &amp; STEM</div>
-            <div class="ti-body" data-gr="Οργάνωση εργαστηριακών δραστηριοτήτων και διεπιστημονικών προγραμμάτων Φυσικής, Τεχνολογίας και Μηχανικής." data-en="Organisation of laboratory activities and interdisciplinary programmes in Physics, Technology, and Engineering.">Οργάνωση εργαστηριακών δραστηριοτήτων και διεπιστημονικών προγραμμάτων Φυσικής, Τεχνολογίας και Μηχανικής.</div>
+            <div class="ti-title" data-gr="Εργαστηριακή Φυσική &amp; STEM" data-en="Laboratory Physics &amp; STEM" data-de="Laborphysik &amp; STEM">Εργαστηριακή Φυσική &amp; STEM</div>
+            <div class="ti-body" data-gr="Οργάνωση εργαστηριακών δραστηριοτήτων και διεπιστημονικών προγραμμάτων Φυσικής, Τεχνολογίας και Μηχανικής." data-en="Organisation of laboratory activities and interdisciplinary programmes in Physics, Technology, and Engineering." data-de="Organisation von Laboraktivitäten und fächerübergreifenden Programmen in Physik, Technologie und Ingenieurwesen.">Οργάνωση εργαστηριακών δραστηριοτήτων και διεπιστημονικών προγραμμάτων Φυσικής, Τεχνολογίας και Μηχανικής.</div>
           </div>
         </li>
         <li class="teaching-item">
           <div class="ti-num">03</div>
           <div>
-            <div class="ti-title" data-gr="Εκπαιδευτική Ρομποτική" data-en="Educational Robotics">Εκπαιδευτική Ρομποτική</div>
-            <div class="ti-body" data-gr="Εισαγωγή ρομποτικών συστημάτων (Arduino, micro:bit, LEGO) για βιωματική μάθηση στις θετικές επιστήμες." data-en="Introduction of robotic systems (Arduino, micro:bit, LEGO) for experiential learning in science education.">Εισαγωγή ρομποτικών συστημάτων (Arduino, micro:bit, LEGO) για βιωματική μάθηση στις θετικές επιστήμες.</div>
+            <div class="ti-title" data-gr="Εκπαιδευτική Ρομποτική" data-en="Educational Robotics" data-de="Bildungsrobotik">Εκπαιδευτική Ρομποτική</div>
+            <div class="ti-body" data-gr="Εισαγωγή ρομποτικών συστημάτων (Arduino, micro:bit, LEGO) για βιωματική μάθηση στις θετικές επιστήμες." data-en="Introduction of robotic systems (Arduino, micro:bit, LEGO) for experiential learning in science education." data-de="Einführung robotischer Systeme (Arduino, micro:bit, LEGO) für erfahrungsbasiertes Lernen in den Naturwissenschaften.">Εισαγωγή ρομποτικών συστημάτων (Arduino, micro:bit, LEGO) για βιωματική μάθηση στις θετικές επιστήμες.</div>
           </div>
         </li>
         <li class="teaching-item">
           <div class="ti-num">04</div>
           <div>
-            <div class="ti-title" data-gr="Ψηφιακή Εκπαίδευση" data-en="Digital Education">Ψηφιακή Εκπαίδευση</div>
-            <div class="ti-body" data-gr="Ενσωμάτωση ψηφιακών εργαλείων και εκπαιδευτικών πλατφορμών στην καθημερινή διδακτική πρακτική." data-en="Integration of digital tools and educational platforms into everyday teaching practice.">Ενσωμάτωση ψηφιακών εργαλείων και εκπαιδευτικών πλατφορμών στην καθημερινή διδακτική πρακτική.</div>
+            <div class="ti-title" data-gr="Ψηφιακή Εκπαίδευση" data-en="Digital Education" data-de="Digitale Bildung">Ψηφιακή Εκπαίδευση</div>
+            <div class="ti-body" data-gr="Ενσωμάτωση ψηφιακών εργαλείων και εκπαιδευτικών πλατφορμών στην καθημερινή διδακτική πρακτική." data-en="Integration of digital tools and educational platforms into everyday teaching practice." data-de="Integration digitaler Werkzeuge und Lernplattformen in den alltäglichen Unterricht.">Ενσωμάτωση ψηφιακών εργαλείων και εκπαιδευτικών πλατφορμών στην καθημερινή διδακτική πρακτική.</div>
           </div>
         </li>
         <li class="teaching-item">
           <div class="ti-num">05</div>
           <div>
-            <div class="ti-title" data-gr="Συμπεριληπτική Τάξη" data-en="Inclusive Classroom">Συμπεριληπτική Τάξη</div>
-            <div class="ti-body" data-gr="Διαφοροποιημένη διδασκαλία και παρεμβάσεις για μαθητές με ειδικές εκπαιδευτικές ανάγκες." data-en="Differentiated instruction and interventions for students with special educational needs.">Διαφοροποιημένη διδασκαλία και παρεμβάσεις για μαθητές με ειδικές εκπαιδευτικές ανάγκες.</div>
+            <div class="ti-title" data-gr="Συμπεριληπτική Τάξη" data-en="Inclusive Classroom" data-de="Inklusive Klasse">Συμπεριληπτική Τάξη</div>
+            <div class="ti-body" data-gr="Διαφοροποιημένη διδασκαλία και παρεμβάσεις για μαθητές με ειδικές εκπαιδευτικές ανάγκες." data-en="Differentiated instruction and interventions for students with special educational needs." data-de="Differenzierter Unterricht und Interventionen für Schülerinnen und Schüler mit sonderpädagogischem Förderbedarf.">Διαφοροποιημένη διδασκαλία και παρεμβάσεις για μαθητές με ειδικές εκπαιδευτικές ανάγκες.</div>
           </div>
         </li>
         <li class="teaching-item">
           <div class="ti-num">06</div>
           <div>
-            <div class="ti-title" data-gr="Προετοιμασία Πανελλαδικών" data-en="University Entrance Exam Preparation">Προετοιμασία Πανελλαδικών</div>
-            <div class="ti-body" data-gr="Συστηματική προετοιμασία Γ' Λυκείου για Φυσική, με έμφαση στη μεθοδολογία και επίλυση ασκήσεων." data-en="Systematic preparation of 12th-grade students for Physics national exams, with emphasis on methodology and problem solving.">Συστηματική προετοιμασία Γ' Λυκείου για Φυσική, με έμφαση στη μεθοδολογία και επίλυση ασκήσεων.</div>
+            <div class="ti-title" data-gr="Προετοιμασία Πανελλαδικών" data-en="University Entrance Exam Preparation" data-de="Vorbereitung auf Aufnahmeprüfungen">Προετοιμασία Πανελλαδικών</div>
+            <div class="ti-body" data-gr="Συστηματική προετοιμασία Γ' Λυκείου για Φυσική, με έμφαση στη μεθοδολογία και επίλυση ασκήσεων." data-en="Systematic preparation of 12th-grade students for Physics national exams, with emphasis on methodology and problem solving." data-de="Systematische Vorbereitung von Abschlussklassen auf die nationalen Physikabiturprüfungen, mit Schwerpunkt auf Methodik und Aufgabenlösung.">Συστηματική προετοιμασία Γ' Λυκείου για Φυσική, με έμφαση στη μεθοδολογία και επίλυση ασκήσεων.</div>
           </div>
         </li>
       </ul>
@@ -479,8 +481,8 @@
 
     <!-- PUBLICATIONS -->
     <section id="publications">
-      <div class="sec-label" data-gr="Δημοσιεύσεις" data-en="Publications">Δημοσιεύσεις</div>
-      <h2 class="sec-title"><b data-gr="Ερευνητικό Έργο" data-en="Research Output">Ερευνητικό Έργο</b></h2>
+      <div class="sec-label" data-gr="Δημοσιεύσεις" data-en="Publications" data-de="Publikationen" data-de="Publikationen">Δημοσιεύσεις</div>
+      <h2 class="sec-title"><b data-gr="Ερευνητικό Έργο" data-en="Research Output" data-de="Forschungsleistung">Ερευνητικό Έργο</b></h2>
       <ul class="teaching-list">
         <li class="teaching-item">
           <div class="ti-num">2026</div>
@@ -498,16 +500,16 @@
 
     <!-- CONTACT -->
     <section id="contact" style="background:#F0F4F9 !important">
-      <div class="sec-label" data-gr="Επικοινωνία" data-en="Contact">Επικοινωνία</div>
-      <h2 class="sec-title"><b data-gr="Ας Μιλήσουμε" data-en="Get in Touch">Ας Μιλήσουμε</b></h2>
+      <div class="sec-label" data-gr="Επικοινωνία" data-en="Contact" data-de="Kontakt">Επικοινωνία</div>
+      <h2 class="sec-title"><b data-gr="Ας Μιλήσουμε" data-en="Get in Touch" data-de="Kontakt aufnehmen">Ας Μιλήσουμε</b></h2>
       <a href="mailto:eztoupa@edlit.auth.gr" class="contact-row">
-        <span class="cr-label" data-gr="Email" data-en="Email">Email</span>
+        <span class="cr-label" data-gr="Email" data-en="Email" data-de="E-Mail">Email</span>
         <span class="cr-value">eztoupa@edlit.auth.gr</span>
         <span class="cr-arrow">→</span>
       </a>
       <a href="https://www.edlit.auth.gr" target="_blank" rel="noopener" class="contact-row">
-        <span class="cr-label" data-gr="Ίδρυμα" data-en="Institution">Ίδρυμα</span>
-        <span class="cr-value" data-gr="Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης" data-en="Aristotle University of Thessaloniki">Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης</span>
+        <span class="cr-label" data-gr="Ίδρυμα" data-en="Institution" data-de="Institution">Ίδρυμα</span>
+        <span class="cr-value" data-gr="Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης" data-en="Aristotle University of Thessaloniki" data-de="Aristoteles-Universität Thessaloniki">Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης</span>
         <span class="cr-arrow">→</span>
       </a>
       <a href="https://www.linkedin.com/in/vangelis-ztoupas-17908616a/" target="_blank" rel="noopener" class="contact-row">
@@ -575,10 +577,10 @@
         b.classList.toggle('active', b.textContent.toLowerCase() === lang);
       });
 
-      document.documentElement.lang = lang === 'gr' ? 'el' : 'en';
+      document.documentElement.lang = lang === 'gr' ? 'el' : lang;
 
-      document.querySelectorAll('[data-gr][data-en]').forEach(el => {
-        el.innerHTML = el.dataset[lang];
+      document.querySelectorAll('[data-gr]').forEach(el => {
+        if (el.dataset[lang]) el.innerHTML = el.dataset[lang];
       });
 
       // Swap name
